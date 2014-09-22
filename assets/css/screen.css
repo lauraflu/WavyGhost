@@ -58,22 +58,25 @@ samp { font-family: monospace, serif; font-size: 1em; }
 pre { white-space: pre-wrap; }
 q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 small { font-size: 80%; }
+/*
 sub, sup {
    font-size: 75%;
    line-height: 0;
    position: relative;
    vertical-align: baseline;
 }
+
 sup { top: -0.5em; }
-sub { bottom: -0.25em; }
+sub { bottom: -0.25em; } */
 img { border: 0; }
 svg:not(:root) { overflow: hidden; }
 figure { margin: 0; }
+/*
 fieldset {
    border: 1px solid #c0c0c0;
    margin: 0 2px;
    padding: 0.35em 0.625em 0.75em;
-}
+}*/
 legend { border: 0; padding: 0; }
 button, input, select,
 textarea { font-family: inherit; font-size: 100%; margin: 0; }
@@ -137,7 +140,6 @@ table { border-collapse: collapse; border-spacing: 0; }
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
  
@@ -147,10 +149,6 @@ table { border-collapse: collapse; border-spacing: 0; }
      
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
  
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
@@ -202,14 +200,14 @@ table { border-collapse: collapse; border-spacing: 0; }
 html {
     height: 100%;
     max-height: 100%;
-    font-size: 62.5%;
+    font-size: 1em;
 }
 
 body {
     height: 100%;
     max-height: 100%;
-    font-family: 'Noto Serif', serif;
-    font-size: 2.0rem;
+    font-family: 'Arimo Web', sans-serif;
+    font-size: 1em;
     line-height: 1.6em;
     color: #3A4145;
 }
@@ -231,37 +229,36 @@ h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
     margin-top: 0;
-    font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4em;
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3em;
     line-height: 1.2em;
     letter-spacing: -1px;
     text-indent: -2px;
 }
 
 h3 {
-    font-size: 3.5rem;
+    font-size: 2.5em;
 }
 
 h4 {
-    font-size: 3rem;
+    font-size: 2em;
 }
 
 h5 {
-    font-size: 2.5rem;
+    font-size: 1.8em;
 }
 
 h6 {
-    font-size: 2rem;
+    font-size: 1.5em;
 }
 
 a {
@@ -282,14 +279,16 @@ h4 a, h5 a, h6 a {
 
 
 p, ul, ol, dl {
-    margin: 1.6em 0;
+    margin: 0;
+    padding: 0;
 }
 
 ol ol, ul ul,
 ul ol, ol ul {
-    margin: 0.4em 0;
+    margin: 0;
+    padding: 0;
 }
-
+/*
 dl dt {
     float: left;
     width: 180px;
@@ -315,7 +314,7 @@ hr {
     margin: 3.2em 0;
     padding: 0;
 }
-
+*/
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -349,8 +348,6 @@ mark {
 }
 
 code, tt {
-    padding: 1px 3px;
-    font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre-wrap;
     border: 1px solid #E3EDF3;
@@ -364,8 +361,6 @@ pre {
     margin: 1.6em 0;
     border: 1px solid #E3EDF3;
     width: 100%;
-    padding: 10px;
-    font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.9em;
     white-space: pre;
     overflow: auto;
@@ -401,7 +396,6 @@ kbd {
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.6em 0;
     width:100%;
     max-width: 100%;
     background-color: transparent;
@@ -409,7 +403,6 @@ table {
 
 table th,
 table td {
-    padding: 8px;
     line-height: 20px;
     text-align: left;
     vertical-align: top;
@@ -443,7 +436,8 @@ table.plain tbody > tr:nth-child(odd) > th {
 
 iframe, .fluid-width-video-wrapper {
     display: block;
-    margin: 1.6em 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* When a video is inside the fitvids wrapper, drop the
@@ -481,36 +475,168 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0 auto;
 }
 
-/* Centres vertically yo. (IE8+) */
-.vertical {
-    display: table-cell;
-    vertical-align: middle;
-}
-
 
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
 
 /* Big cover image on the home page */
-.site-head {
-    position: relative;
-    display: table;
+
+/* Header styles */
+.main-header {
+    display: block;
     width: 100%;
-    height: 400px;
-    margin-bottom: 5rem;
-    text-align: center;
-    color: #fff;
-    background: url(../images/svg_header.svg);
-    background-size: 110% auto;
-    background-repeat: no-repeat;
-    background-position: center top;
-    border: 1px solid black;
+    height: 16em;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+    background: #eaeaea;
 }
 
 .blog-logo {
     text-decoration: none;
 }
+
+/* Subheader styles */
+.subheader {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.subheader:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.main-menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    display: inline;
+    float: left;
+    font-size: 1em;
+    font-variant: small-caps;
+}
+
+.menu-link {
+    display: table-cell;
+    position: relative;
+    width: 10em;
+    height: 50px;
+    vertical-align: middle;
+    padding-left: 0.5em;
+    color: #000;
+    background: none repeat scroll 0% 0% ;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-link:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-sandwich {
+    display: none;
+}
+
+.social-icons {
+    display: inline;
+    float: right;
+    position: absolute;
+    right: 0.5em;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.hover {
+    position: absolute;
+    right: 0px;
+    top: 9px;
+    font-size: 32px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0);
+    background-image: url(images/arrow.svg);
+    background-size: 20px 40px;
+    background-position: center;
+    z-index: 2;
+    transition: all 0.2s;
+}
+
+.icon-wrapper {
+    position: absolute;
+    right: -320px;
+    top: 5px;
+    transition: all 0.5s;
+    display: inline-block;
+}
+
+.social-icons:hover {
+    width: 40%;
+}
+
+.social-icons:hover .icon-wrapper {
+    transform: translate(-360px, 0);
+}
+
+.social-link {
+    display: inline-block;
+    position: relative;
+    font-size: 32px;
+    width: 40px;
+    height: 40px;
+    padding-top: 3px;
+    padding-left: 3px;
+}
+
+.social-link:after {
+    position: absolute;
+    box-shadow: 0 0 0 1px transparent;
+    left: 20px;
+    margin-left: -20px;
+    top: 20px;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    content: "";
+    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box; 
+    box-sizing: content-box;
+    -webkit-transition: -webkit-transform 0.2s;
+    -webkit-transform: scale(0.7);
+    -moz-transition: -moz-transform 0.2s;
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transition: transform 0.2s;
+    transform: scale(0.7);
+}
+
+.social-link:hover:after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 3px #c2c2c2;
+}
+
+.social-link:hover {
+    fill: #c2c2c2;
+}
+
+.social-link:not(:last-child) {
+    margin-right: 0.5em;
+}
+/* End of Subheader styles */
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 .blog-logo img {
@@ -527,7 +653,6 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
     text-shadow: 0 1px 6px rgba(0,0,0,0.1);
     color:#fff076;
 }
@@ -537,7 +662,6 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 1.8rem;
     line-height: 1.5em;
     font-weight: 300;
-    font-family: 'Noto Serif', serif;
     letter-spacing: 0;
     text-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
@@ -600,9 +724,8 @@ margin on the iframe, cause it breaks stuff. */
 .post-meta {
     display: inline-block;
     margin: 0 0 5px 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
     color: #FCC471;
+    font-weight: 800;
 }
 
 .post-meta a {
@@ -865,7 +988,6 @@ margin on the iframe, cause it breaks stuff. */
     width: 80%;
     max-width: 700px;
     margin: 4rem auto;
-    font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -915,7 +1037,6 @@ margin on the iframe, cause it breaks stuff. */
     margin: 8rem 0 0 0;
     padding: 4rem 0;
     border-top: none;
-    font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
     color: #fff;
@@ -1033,7 +1154,7 @@ margin on the iframe, cause it breaks stuff. */
         margin-left: 0;
     }
 
-    .site-head {
+    .main-header {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -1066,20 +1187,20 @@ margin on the iframe, cause it breaks stuff. */
     }
 
     h1 {
-        font-size: 4.8rem;
+        font-size: 4em;
         text-indent: -2px;
     }
 
     h2 {
-        font-size: 3.8rem;
+        font-size: 3em;
     }
 
     h3 {
-        font-size: 3.3rem;
+        font-size: 2em;
     }
 
     h4 {
-        font-size: 2.8rem;
+        font-size: 2.3em;
     }
 
 }
@@ -1110,7 +1231,7 @@ margin on the iframe, cause it breaks stuff. */
         line-height: 1.6em;
     }
 
-    .site-head {
+    .main-header {
         padding: 10% 0;
     }
 

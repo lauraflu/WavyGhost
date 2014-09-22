@@ -4,45 +4,44 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
-<header class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-    <div class="vertical">
-        <div class="site-head-content inner">
-        	<!-- start of Subheader -->
-            <div class="Subheader box-resize">
-				<div class="MainMenu">
-					<a href="{{@blog.url}}/About" class="MenuLink box-resize">About</a>
-					<a href="{{@blog.url}}/" class="MenuLink box-resize">Blog </a>
-					<a href="{{@blog.url}}/Portfolio" class="MenuLink box-resize">Portfolio</a>
-					<div class="MenuSandwich"></div>
-				</div>
+<header class="main-header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    
+	<!-- start of Subheader -->
+    <div class="subheader box-resize">
+		<div class="main-menu">
+			<a href="{{@blog.url}}/About" class="menu-link box-resize">About</a>
+			<a href="{{@blog.url}}/" class="menu-link box-resize">Blog </a>
+			<a href="{{@blog.url}}/Portfolio" class="menu-link box-resize">Portfolio</a>
+			<div class="menu-sandwich"></div>
+		</div>
 
-				<div class="SocialIcons">
-					<div class="IconWrapper">
+		<div class="social-icons">
 
-						<a href="#" class="SocialLink icon-facebook-circled"></a>
-						<a href="#" class="SocialLink icon-github-circled-2"></a>
-						<a href="#" class="SocialLink icon-linkedin-circled"></a>
-						<a href="#" class="SocialLink icon-twitter-circled"></a>
+			<div class="icon-wrapper">
+				<a href="#" class="social-link icon-facebook-circled"></a>
+				<a href="#" class="social-link icon-github-circled-1"></a>
+				<a href="#" class="social-link icon-linkedin-circled"></a>
+				<a href="#" class="social-link icon-twitter-circled"></a>
+			</div>
 
-						<div class="Hover">
-							<a href="#">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div> <!-- end of Subheader -->
+			<div class="hover">
+				<a href="#" class="icon-left-open">
+				</a>
+			</div>
+		</div>
+	</div> <!-- end of Subheader -->
 
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-            <h1 class="blog-title">{{@blog.title}}</h1>
-            <!--<h2 class="blog-description">{{@blog.description}}</h2>-->
-            <!-- for special purpose I've omited the default blog desc -->
-            <h2 class="blog-description">  I'll think of a deep description later.  </h2>
-        </div>
+	<div class="site-head-content inner">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+        <h1 class="blog-title">{{@blog.title}}</h1>
+        <!--<h2 class="blog-description">{{@blog.description}}</h2>-->
+        <!-- for special purpose I've omited the default blog desc -->
+        <h2 class="blog-description">  I'll think of a deep description later.  </h2>
     </div>
 </header>
 
 {{! The main content area on the homepage }}
-<main class="content" role="main">
+<main class="content home-page-content" role="main">
 
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
