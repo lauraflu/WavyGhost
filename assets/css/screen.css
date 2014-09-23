@@ -486,22 +486,58 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     display: block;
     width: 100%;
-    height: 350px;
+    height: auto;
     top: 0;
-    z-index: 100;
     transition: all 0.3s ease-in-out;
+    /*
     background: url(../images/header-background.svg);
+    background-position: top center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% auto;*/
+}
+
+.header-background {
+    width: 100%;
 }
 
 .blog-logo {
     text-decoration: none;
 }
 
+/* End of Subheader styles */
+
+/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
+.blog-logo img {
+    display: block;
+    max-height: 120px;
+    width: auto;
+    margin: 0 auto;
+    line-height: 0;
+}
+
+/* The details of your blog. Defined in ghost/settings/ */
+.blog-title {
+    font-size: 2.5em;
+    font-weight: 800;
+    font-variant: small-caps;
+    width: auto;
+    position: absolute;
+    top: 75%;
+    padding-left: 2em;
+}
+
+.blog-description {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    text-align: right;
+    width: 35%;
+}
+
 /* Subheader styles */
 .subheader {
-    position: relative;
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 54px;
     background: rgba(255, 255, 255, 0.5);
@@ -538,7 +574,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .menu-link:hover {
-    color: #fb3d63;
+    color: #fb9b3d;
     text-decoration: none;
 }
 
@@ -621,7 +657,7 @@ margin on the iframe, cause it breaks stuff. */
     top: -6px;
     left: -6px;
     padding: 6px;
-    box-shadow: 0 0 0 3px #a64849;
+    box-shadow: 0 0 0 3px #fb9b3d;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -webkit-transform: scale(.8);
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -638,7 +674,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* --- hover effects ---*/
 .hover a, .social-link, .social-link:before, .social-link:after {
-    color: #a64849;
+    color: #fb9b3d;
 }
 
 .hover a:hover, .social-link:hover {
@@ -661,29 +697,10 @@ margin on the iframe, cause it breaks stuff. */
     opacity: 1;
 }
 
-/* End of Subheader styles */
+/* Content main styles */
 
-/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
-.blog-logo img {
-    display: block;
-    max-height: 120px;
-    width: auto;
-    margin: 0 auto;
-    line-height: 0;
-}
+.content {
 
-/* The details of your blog. Defined in ghost/settings/ */
-.blog-title {
-    position: absolute;
-    width: 25%;
-    bottom: 0;
-}
-
-.blog-description {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 20%;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -698,8 +715,13 @@ margin on the iframe, cause it breaks stuff. */
     hyphens: auto;
 }
 
+.post:first-child {
+    margin-top: 0;
+}
+
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
+/*
 .post:after {
     display: block;
     content: "";
@@ -716,6 +738,7 @@ margin on the iframe, cause it breaks stuff. */
     border-radius: 100%;
     box-shadow: #fff 0 0 0 5px;
 }
+*/
 
 .post-title {
     margin:0;
