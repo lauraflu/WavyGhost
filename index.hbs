@@ -30,14 +30,12 @@
 			</div>
 		</div>
 	</div> <!-- end of Subheader -->
-
-	<div class="site-head-content inner">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-        <h1 class="blog-title">{{@blog.title}}</h1>
-        <!--<h2 class="blog-description">{{@blog.description}}</h2>-->
-        <!-- for special purpose I've omited the default blog desc -->
-        <h2 class="blog-description">  I'll think of a deep description later.  </h2>
-    </div>
+	
+    {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+    <div class="blog-title">{{@blog.title}}</div>
+    <!--<h2 class="blog-description">{{@blog.description}}</h2>-->
+    <!-- for special purpose I've omited the default blog desc -->
+    <div class="blog-description">  {{@blog.description}}  </div>
 </header>
 
 {{! The main content area on the homepage }}
@@ -52,7 +50,7 @@
             <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
         </header>
         <section class="post-excerpt">
-            <p>{{excerpt}}&hellip; <a class="read-more" href="{{url}}">&raquo;</a></p>
+            <p>{{excerpt}}&hellip; <a class="read-more" href="{{url}}">Read more &raquo;</a></p>
         </section>
     </article>
 
