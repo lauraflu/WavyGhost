@@ -562,19 +562,19 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .menu-link {
-    display: table-cell;
     position: relative;
     width: 10em;
     height: 52px;
-    vertical-align: middle;
+    line-height: 52px;
+    float: left;
     padding-left: 0.5em;
-    color: #a64849;
+    color: #C03B10;
     background: none repeat scroll 0% 0% ;
     transition: color 0.3s ease-in-out;
 }
 
 .menu-link:hover {
-    color: #fb9b3d;
+    color: #DF8265;
     text-decoration: none;
 }
 
@@ -657,7 +657,7 @@ margin on the iframe, cause it breaks stuff. */
     top: -6px;
     left: -6px;
     padding: 6px;
-    box-shadow: 0 0 0 3px #fb9b3d;
+    box-shadow: 0 0 0 3px #C03B10;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -webkit-transform: scale(.8);
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -674,7 +674,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* --- hover effects ---*/
 .hover a, .social-link, .social-link:before, .social-link:after {
-    color: #fb9b3d;
+    color: #C03B10;
 }
 
 .hover a:hover, .social-link:hover {
@@ -1082,34 +1082,18 @@ margin on the iframe, cause it breaks stuff. */
     margin: 8rem 0 0 0;
     padding: 4rem 0;
     border-top: none;
-    font-size: 1.3rem;
-    line-height: 1.7em;
     color: #fff;
     text-align: center;
-    background: #6ec6fc;
+    background: #a3ecf3;
 }
 
 .site-footer a {
-    color: #B8FFC9;
-    text-decoration: underline;
+    color: #fff;
+    font-weight: bold;
 }
 
 .site-footer a:hover {
-    color: #50585D;
-}
-
-.poweredby .icon-ghost {
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.poweredby .icon-ghost:hover {
-    text-decoration: none;
-}
-
-.poweredby .icon-ghost:before {
-    font-size: 1rem;
-    margin-right: 0.2em;
+    
 }
 
 /* The subscribe icon on the footer */
