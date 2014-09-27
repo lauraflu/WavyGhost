@@ -708,9 +708,9 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     width:80%;
     max-width: 700px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
-    border-bottom: #6ec6fc 1px solid;
+    margin: 0 auto;
+    padding: 4rem;
+    border-bottom: #a3ecf3 1px solid;
     word-break: break-word;
     hyphens: auto;
 }
@@ -719,29 +719,12 @@ margin on the iframe, cause it breaks stuff. */
     margin-top: 0;
 }
 
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-/*
-.post:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #6ec6fc 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px;
+.post-header {
+    margin-left: 13em;
 }
-*/
 
 .post-title {
-    margin:0;
+    margin:0
     color: #222;
 }
 
@@ -754,6 +737,10 @@ margin on the iframe, cause it breaks stuff. */
 .post-title a:hover {
     color: #41b7d8;
     text-decoration: none;
+}
+
+.post-excerpt {
+    margin-left: 13em;
 }
 
 .post-excerpt p {
@@ -823,6 +810,25 @@ margin on the iframe, cause it breaks stuff. */
     display: block;
     font-size: 1.4rem;
     line-height: 1.5em;
+}
+
+.pp-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -100;
+    border: 3px solid red;
+}
+
+.pp-image {
+    position: relative;
+    height: 100%;
+    border: 1px solid black;
+    padding: 2em;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box; 
 }
 
 /* ==========================================================================
