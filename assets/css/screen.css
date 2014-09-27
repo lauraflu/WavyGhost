@@ -232,14 +232,14 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 2.5em;
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1.2em;
     letter-spacing: -1px;
     text-indent: -2px;
@@ -708,11 +708,17 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     width:80%;
     max-width: 700px;
-    margin: 0 auto;
-    padding: 4rem;
-    border-bottom: #a3ecf3 1px solid;
+    margin: 4em auto;
+    margin-bottom: 5em;
+    /*padding: 2em;*/
+    /* border-bottom: #a3ecf3 1px solid; */
     word-break: break-word;
     hyphens: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    font-size: 0.9em;
+    letter-spacing: -0.03em;
 }
 
 .post:first-child {
@@ -720,11 +726,13 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-header {
-    margin-left: 13em;
+    padding-top: 1.5em;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .post-title {
-    margin:0
+    margin-bottom: 0.2em;
     color: #222;
 }
 
@@ -737,10 +745,6 @@ margin on the iframe, cause it breaks stuff. */
 .post-title a:hover {
     color: #41b7d8;
     text-decoration: none;
-}
-
-.post-excerpt {
-    margin-left: 13em;
 }
 
 .post-excerpt p {
@@ -758,15 +762,28 @@ margin on the iframe, cause it breaks stuff. */
     display: inline-block;
     margin: 0 0 5px 0;
     color: #222;
-    font-weight: 800;
 }
 
-.post-meta a {
-
+.post-meta time {
+    display: block;
+    /*position: absolute;
+    top: 4rem;
+    right: 1em;*/
+    text-align: center;
+    font-size: 0.6em;
+    background: #F3E7D6;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    line-height: 80px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    opacity: 0.7;
 }
 
-.post-meta a:hover {
-
+.post-preview-tags a {
+    color: #222;
 }
 
 .user-meta {
@@ -812,24 +829,51 @@ margin on the iframe, cause it breaks stuff. */
     line-height: 1.5em;
 }
 
+/*  For best results, make the post preview image the size of ..... 
+    If the image is not this size, it won't affect the layout, because of 
+    the overflow: hidden, but it won't look very nice.
+    If you're not that keen on having post preview images, just don't add them and
+    remove the margin-left below */
+
+.post-header, .post-excerpt {
+    
+}
+
 .pp-image-wrapper {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
+    right: 0;
+    height: 80px;
     z-index: -100;
-    border: 3px solid red;
+    overflow: hidden;
+    opacity: 0.4;
 }
 
 .pp-image {
     position: relative;
-    height: 100%;
-    border: 1px solid black;
-    padding: 2em;
+    width: 100%;
+    /*padding: 1em;*/
     -webkit-box-sizing: border-box; 
     -moz-box-sizing: border-box;    
     box-sizing: border-box; 
 }
+/*
+.pp-image-wrapper:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+}*/
 
 /* ==========================================================================
    5. Single Post - When you click on an individual post
