@@ -11,15 +11,17 @@
         {{! Everything inside the #post tags pulls data from the post }}
         {{#post}}
 
-            <span class="post-meta">
-              <time datetime="{{date format='YYYY-MM-DD'}} class="box-sizing">
-                <span class="published-month">{{date format='MMM'}}</span>
-                <span class="published-day">{{date format='Do'}}</span>
-                <span class="published-year">{{date format='YYYY'}}</span>
-              </time>
-            </span>
+            <header class="post-header">
+              <h1 class="post-title">{{{title}}}</h1>
 
-            <h1 class="post-title">{{{title}}}</h1>
+              <span class="post-meta">
+                <time datetime="{{date format='YYYY-MM-DD'}} class="box-sizing">
+                  <span class="published-month">{{date format='MMM'}}</span>
+                  <span class="published-day">{{date format='Do'}}</span>
+                  <span class="published-year">{{date format='YYYY'}}</span>
+                </time>
+              </span>
+            </header>
 
             <span class="post-tags">{{tags prefix="<span class='icon-tag'></span>"}}</span>
 
@@ -50,7 +52,7 @@
                         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                         <span class="hidden">Facebook</span>
                     </a>
-                    <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                    <a class="icon-gplus" href="https://plus.google.com/share?url={{url absolute="true"}}"
                        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                         <span class="hidden">Google+</span>
                     </a>
