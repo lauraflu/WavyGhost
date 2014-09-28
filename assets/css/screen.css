@@ -712,7 +712,7 @@ margin on the iframe, cause it breaks stuff. */
 
 }
 
-/* Every post, on every page, gets this style on its <article> tag */
+/* Styling post previews */
 .home-page-content {
     width: 100%;
 }
@@ -730,7 +730,7 @@ margin on the iframe, cause it breaks stuff. */
     background: #fff8e8;
 }
 
-.post:after, .post-header:after {
+.post:after, .post-header:after, .post-footer:after {
   content: "";
   display: table;
   clear: both;
@@ -740,13 +740,13 @@ margin on the iframe, cause it breaks stuff. */
     margin-top: 0;
 }
 
-.post-header {
+.home-page-content .post-header {
     width: 100%;
     padding-top: 0.5em;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
-.post-title {
+.home-page-content .post-title {
     display: inline;
     margin-bottom: 0.2em;
     color: #222;
@@ -795,11 +795,11 @@ margin on the iframe, cause it breaks stuff. */
     opacity: 0.7;
 }
 
-.post-preview-tags a {
+.post-tags a {
     color: #222;
 }
 
-.post-preview-tags .icon-tag {
+.post-tags .icon-tag {
     margin: 0 0.5em 0 0;
 }
 
@@ -856,7 +856,7 @@ margin on the iframe, cause it breaks stuff. */
     it look good and aligned.
     */
 
-.pp-image {
+.home-page-content .pp-image {
     position: relative;
     float: left;
     margin: 0 1em 1em 0;
@@ -872,7 +872,7 @@ margin on the iframe, cause it breaks stuff. */
     border-bottom: 20px solid #e9e8e8;
 }
 
-.pp-image img {
+.home-page-content .pp-image img {
     position: relative;
     max-height: 100%;
     z-index: 100;
@@ -882,6 +882,25 @@ margin on the iframe, cause it breaks stuff. */
    5. Single Post - When you click on an individual post
    ========================================================================== */
 
+/* Add specific style for the subheader on the post page */
+.post-template .subheader {
+    background: rgba(251, 155, 61, 0.8);
+}
+
+.post-template .social-link:after {
+    box-shadow: 0 0 0 3px #fff;
+}
+
+.post-template .hover a, .post-template .social-link, .post-template .social-link:before, 
+.post-template .social-link:after, .post-template .menu-link {
+    color: #fff;
+}
+
+.post-template .menu-link:hover {
+    opacity: 0.6;
+    transition: all 0.2s ease-in;
+}
+
 /* Stop .full-img from creating horizontal scroll - slight hack due to
    imperfections with browser width % calculations and rounding */
 .post-template .content {
@@ -890,20 +909,25 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Tweak the .post wrapper style */
 .post-template .post {
-    margin-top: 0;
-    border-bottom: none;
+    margin-top: 60px;
     padding-bottom: 0;
+    background: none;
 }
 
-/* Kill that stylish little circle that was on the border, too */
-.post-template .post:after {
-    display: none;
+/* Add spacing between paragraphs */
+.post-template p {
+    margin: 1.5em 0  1.5em 0;
 }
 
 /* Insert some mad padding up in the header for better spacing */
 .post-template .post-header {
     padding: 60px 0;
-    text-align: center;
+}
+
+.post-template .post-title {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
 .post-template .blog-title {
@@ -911,29 +935,26 @@ margin on the iframe, cause it breaks stuff. */
     padding: 2.5rem 0;
 }
 
+.post-template .post-tags {
+    display: block;
+    clear: both;
+}
+
 /* Keep images centred and within the bounds of the post-width */
 .post-content img {
     display: block;
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
-    margin: 0 auto;
     padding: 0.6em 0;
-}
-
-/* Break out larger images to be wider than the main text column
-   the class is applied with jQuery */
-.post-content .full-img {
-    width: 126%;
-    max-width: none;
-    margin: 0 -13%;
+    margin: 0 auto;
 }
 
 /* The author credit area after the post */
 .post-footer {
     position: relative;
     margin: 4rem 0 0 0;
-    padding: 4rem 0 0 0;
-    border-top: #6ec6fc 1px solid;
+    padding: 2rem 0 0 0;
+    border-top: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
 .post-footer h4 {
@@ -984,15 +1005,12 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Create some space to the right for the share links */
 .post-footer .author {
-    margin-right: 180px;
-    margin-left:120px;
-    vertical-align: top;
+    float: left;
+    margin-left: 1em;
 }
 
 .post-footer .author-img {
-    overflow: hidden;
-    text-align: left;
-    position: absolute;
+    float: left;
 }
 
 /* Drop the share links in the space to the right.
@@ -1000,20 +1018,16 @@ margin on the iframe, cause it breaks stuff. */
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
 .post-footer .share {
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    width: 140px;
+    float: right;
 }
 
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
-    margin: 1rem 1.3rem 1.3rem 0;
+    margin: 0.3em 0 0.5rem 0.5em;
     color: #fff;
     text-decoration: none;
-
-    display: inline-block;
+    float: right;
     width: 30px;
     height: 30px;
     background-color: rgb(255, 123, 123);

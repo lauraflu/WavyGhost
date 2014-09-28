@@ -4,43 +4,7 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
-
-<header class="main-header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-	<object type="image/svg+xml" data="{{asset "images/header-background.svg"}}" class="header-background">
-  		Kiwi Logo <!-- fallback image in CSS -->
-	</object>
-    
-	<!-- start of Subheader -->
-    <div class="subheader box-resize">
-		<div class="main-menu">
-			<a href="{{@blog.url}}/About" class="menu-link box-resize">About</a>
-			<a href="{{@blog.url}}/" class="menu-link box-resize">Blog </a>
-			<a href="{{@blog.url}}/Portfolio" class="menu-link box-resize">Portfolio</a>
-			<div class="menu-sandwich"></div>
-		</div>
-
-		<div class="social-icons">
-
-			<div class="icon-wrapper">
-				<a href="#" class="social-link icon-facebook-circled"></a>
-				<a href="#" class="social-link icon-github-circled-1"></a>
-				<a href="#" class="social-link icon-linkedin-circled"></a>
-				<a href="#" class="social-link icon-twitter-circled"></a>
-			</div>
-
-			<div class="hover">
-				<a href="#" class="icon-left-open">
-				</a>
-			</div>
-		</div>
-	</div> <!-- end of Subheader -->
-	
-    {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-    <div class="blog-title">{{@blog.title}}</div>
-    <!--<h2 class="blog-description">{{@blog.description}}</h2>-->
-    <!-- for special purpose I've omited the default blog desc -->
-    <div class="blog-description">  {{@blog.description}}  </div>
-</header>
+{{> main-header}}
 
 {{! The main content area on the homepage }}
 <main class="content home-page-content" role="main">
@@ -51,7 +15,11 @@
     <article class="{{post_class}} box-sizing">
         <header class="post-header">
             <span class="post-meta">
-            	<time datetime="{{date format='YYYY-MM-DD'}}" class="box-sizing">{{date format="DD MMM YYYY"}}</time> 
+            	<time datetime="{{date format='YYYY-MM-DD'}} class="box-sizing">
+            		<span class="published-month">{{date format='MMM'}}</span>
+            		<span class="published-day">{{date format='Do'}}</span>
+            		<span class="published-year">{{date format='YYYY'}}</span>
+            	</time>
 			</span>
             <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
         </header>
@@ -62,7 +30,7 @@
             	&hellip; <a class="read-more" href="{{url}}">Read more &raquo;</a>
             </p>
         </section>
-        <span class="post-preview-tags">{{tags prefix="<span class='icon-tag'></span>"}}</span>
+        <span class="post-tags">{{tags prefix="<span class='icon-tag'></span>"}}</span>
     </article>
 
     {{/foreach}}
