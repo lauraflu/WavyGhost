@@ -846,46 +846,36 @@ margin on the iframe, cause it breaks stuff. */
     line-height: 1.5em;
 }
 
-/*  For best results, make the post preview image SQUARE.
-    If the image is not this size, it won't affect the layout, because the 
-    preview image has a fixed size, but it will stretch.
-    As I mentioned in the README.md, in order for the image to look good when previewed, 
-    wrap it in a span with the class="pp-image", then the rest will work out nicely. */
+/*  As I mentioned in the README.md, in order for the image to look good when previewed, 
+    wrap it in a span with the class="pp-image", then the rest will work out nicely. 
+
+    For best results, make the post preview image SQUARE.
+    If it's not square, the layout won't be affected and the border will wrap around the image, 
+    but the preview text won't be properly aligned with the other posts'.
+    Or, to get rid of headaches, you can float: right; the image and play with the margins to make
+    it look good and aligned.
+    */
 
 .pp-image {
     position: relative;
     float: left;
     margin: 0 1em 1em 0;
-    width: 200px;
+    width: auto;
+    max-width: 200px;
     height: 200px;
-    padding: 1em 1em 2em 1em;
+    /* padding: 1em 1em 2em 1em; */
     -webkit-box-sizing: border-box; 
     -moz-box-sizing: border-box;    
     box-sizing: border-box; 
+    overflow: hidden;
+    border: 10px solid #e9e8e8;
+    border-bottom: 20px solid #e9e8e8;
 }
 
 .pp-image img {
     position: relative;
-    width: 100%;
-    height: 100%;
+    max-height: 100%;
     z-index: 100;
-}
-
-.pp-image:before {
-    content: "";
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    background: #e9e8e8;
-    border: 1px solid #dddddd;
-    padding-bottom: 1em;
-    -webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box;    
-    box-sizing: border-box; 
 }
 
 /* ==========================================================================
@@ -1096,13 +1086,9 @@ margin on the iframe, cause it breaks stuff. */
     width: 80%;
     max-width: 700px;
     margin: 4rem auto;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #9EABB3;
     text-align: center;
-}
-
-.pagination a {
-    color: rgb(255, 123, 123);
 }
 
 /* Push the previous/next links out to the left/right */
@@ -1111,9 +1097,7 @@ margin on the iframe, cause it breaks stuff. */
     position: absolute;
     display: inline-block;
     padding: 0 15px;
-    border: #EBF2F6 2px solid;
     text-decoration: none;
-    border-radius: 30px;
     transition: border ease 0.3s;
 }
 
@@ -1132,7 +1116,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .older-posts:hover,
 .newer-posts:hover {
-    border-color: #9EABB3;
+
 }
 
 
@@ -1143,16 +1127,16 @@ margin on the iframe, cause it breaks stuff. */
 .site-footer {
     position: relative;
     margin: 8rem 0 0 0;
-    padding: 4rem 0;
+    padding: 2rem 0;
     border-top: none;
     color: #fff;
     text-align: center;
-    background: #a3ecf3;
+    background: rgba(251, 155, 61, 0.8);
 }
 
 .site-footer a {
-    color: #fff;
     font-weight: bold;
+    color: #fff;
 }
 
 .site-footer a:hover {
