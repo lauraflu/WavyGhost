@@ -16,5 +16,4 @@ function MenuHover(width) {
         $(".menu-link").removeClass("menu-link-hover");
       }
     );
-    console.log("aici");
 }

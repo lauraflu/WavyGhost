@@ -1,0 +1,20 @@
+<article class="{{post_class}} post-preview box-sizing">
+    <header class="post-header">
+        <span class="post-meta">
+        	<time datetime="{{date format='YYYY-MM-DD'}} class="box-sizing">
+        		<span class="published-month">{{date format='MMM'}}</span>
+        		<span class="published-day">{{date format='D'}}</span>
+        		<span class="published-year">{{date format='YYYY'}}</span>
+        	</time>
+		</span>
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>
+        	{{content words="0"}}	
+			{{excerpt}}
+        	&hellip; <a class="read-more" href="{{url}}">Read more &raquo;</a>
+        </p>
+    </section>
+    <span class="post-tags">{{tags prefix="<span class='icon-tag'></span>"}}</span>
+</article>
