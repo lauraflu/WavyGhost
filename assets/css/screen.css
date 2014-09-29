@@ -35,7 +35,6 @@ audio, canvas, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 [hidden], template { display: none; }
 html {
-   font-family: sans-serif;
    -ms-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
 }
@@ -208,7 +207,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: 'Arimo Web', sans-serif;
+    font-family: 'PT Serif', serif;
     font-size: 1em;
     line-height: 1.6em;
     color: #3A4145;
@@ -507,14 +506,15 @@ margin on the iframe, cause it breaks stuff. */
 .blog-title {
     font-size: 2.5em;
     line-height: 1em; 
-    font-weight: 800;
-    font-variant: small-caps;
+    /*font-weight: 800;*/
+    /*font-variant: small-caps;*/
     width: auto;
     position: absolute;
     top: 70px;
     left: 1.3rem;
     color: #6B5E54;
     border-bottom: 1px dashed #6B5E54;
+    font-family: 'Dancing Script', cursive;
 }
 
 .blog-description {
@@ -699,8 +699,7 @@ margin on the iframe, cause it breaks stuff. */
     word-break: break-word;
     hyphens: auto;
     padding: 1em;
-    font-size: 0.9em;
-    letter-spacing: -0.03em;
+    font-size: 1em;
 }
 
 .post-preview {
@@ -726,10 +725,13 @@ margin on the iframe, cause it breaks stuff. */
     display: inline-block;
     color: #222;
     float: left;
-    margin: 0;
+    margin: 0 0 0 0;
     padding: 0;
-    height: 100%;
-    max-width: 85%;
+    max-width: 80%;
+    height: 4rem;
+    display: table;
+    vertical-align: middle;
+    font-family: 'Dancing Script', cursive;
 }
 
 .post-title a {
@@ -772,6 +774,7 @@ margin on the iframe, cause it breaks stuff. */
     background: rgba(255, 255, 255, 1);
     padding: 1em 1em 1em 1em;
     box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1);
+    height: 3rem;
 }
 
 .published-month, .published-day, .published-year {
@@ -1152,11 +1155,19 @@ margin on the iframe, cause it breaks stuff. */
 
 @media all and (max-width: 560px) {
     .post {
-        font-size: 1.2em;
         width: 95%;
         margin-bottom: 1rem;
         margin-top: 2rem;
     }
+
+    .post-title {
+        font-size: 2.5em;
+    }
+
+    .post-excerpt {
+        font-size: 1.2em;
+    }
+
     .header-background {
         width: 200%;
         margin-left: -20%;
