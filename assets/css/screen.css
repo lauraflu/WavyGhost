@@ -487,6 +487,7 @@ margin on the iframe, cause it breaks stuff. */
     height: auto;
     top: 0;
     transition: all 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .header-background {
@@ -728,7 +729,7 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0;
     padding: 0;
     height: 100%;
-    line-height: 2.5em;
+    max-width: 85%;
 }
 
 .post-title a {
@@ -839,20 +840,6 @@ margin on the iframe, cause it breaks stuff. */
 /* Add specific style for the subheader on the post page */
 .post-template .subheader {
     background: #F3F1CA;
-}
-
-.post-template .social-link:after {
-    box-shadow: 0 0 0 3px #222;
-}
-
-.post-template .hover a, .post-template .social-link, .post-template .social-link:before, 
-.post-template .social-link:after, .post-template .menu-link {
-    color: #222;
-}
-
-.post-template .menu-link:hover {
-    opacity: 0.6;
-    transition: all 0.2s ease-in;
 }
 
 /* Stop .full-img from creating horizontal scroll - slight hack due to
@@ -1041,7 +1028,6 @@ margin on the iframe, cause it breaks stuff. */
 .newer-posts {
     position: absolute;
     display: inline-block;
-    padding: 0 15px;
     text-decoration: none;
     transition: border ease 0.3s;
 }
@@ -1057,11 +1043,6 @@ margin on the iframe, cause it breaks stuff. */
 
 .newer-posts {
     left: 0;
-}
-
-.older-posts:hover,
-.newer-posts:hover {
-
 }
 
 
@@ -1088,110 +1069,59 @@ margin on the iframe, cause it breaks stuff. */
     
 }
 
-/* The subscribe icon on the footer */
-.subscribe {
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    margin-left: -15px;
-    border: #6ec6fc 1px solid;
-    text-align: center;
-    line-height: 2.4rem;
-    border-radius: 50px;
-    background: #fff;
-    transition: box-shadow 0.5s;
-}
-
-/* The RSS icon, inserted via icon font */
-.subscribe:before {
-    color: #6ec6fc;
-    font-size: 10px;
-    position: absolute;
-    top: 9px;
-    left: 9px;
-    font-weight: bold;
-    transition: color 0.5s ease;
-}
-
-/* Add a box shadow to on hover */
-.subscribe:hover {
-    box-shadow: rgba(0,0,0,0.05) 0 0 0 3px;
-    transition: box-shadow 0.25s;
-}
-
-.subscribe:hover:before {
-    color: #50585D;
-}
-
-/* CSS tooltip saying "Subscribe!" - initially hidden */
-.tooltip {
-    opacity:0;
-    display: inline-block;
-    padding: 4px 8px 5px 8px;
-    position:absolute;
-    top: -23px;
-    left: -21px;
-    color: rgba(255,255,255,0.9);
-    font-size: 1.1rem;
-    line-height: 1em;
-    text-align: center;
-    background: #50585D;
-    border-radius:20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    transition: opacity 0.3s ease, top 0.3s ease;
-}
-
-/* The little chiclet arrow under the tooltip, pointing down */
-.tooltip:after {
-    content:"";
-    border-width:5px 5px 0 5px;
-    border-style:solid;
-    border-color: #50585D transparent;
-    display:block;
-    position:absolute;
-    bottom:-4px;
-    left:50%;
-    margin-left:-5px;
-    z-index: 220;
-    width:0;
-}
-
-/* On hover, show the tooltip! */
-.subscribe:hover .tooltip {
-    opacity: 1;
-    top: -33px;
-}
-
 
 /* ==========================================================================
    10. Media Queries - Smaller than 900px
    ========================================================================== */
+@media all and (max-width: 900px) {
+    .post {
+        width: 90%;
+    }
 
+    .header-background {
+        width: 130%;
+    }
+}
 
+@media all and (max-width: 680px) {
+    .header-background {
+        width: 150%;
+        margin-left: -10%;
+    }
 
-/* ==========================================================================
-   11. Media Queries - Smaller than 480px
-   ========================================================================== */
+    .blog-title {
+        font-size: 2em;
+    }
 
-@media all and (max-width: 480px) {
+    .blog-description {
+        top: 105px;
+        width: 50%;
+    }
 
-    .main--menu {
-        position: absolute;
-        top: 4em;
-        background: white;
-        height: 0;
+    .social-icons:hover {
+        width: 100%;
     }
 
     .menu-link {
         display: block;
-        width: 60%;
+        width: 40%;
         font-size: 1.3em;
         line-height: 2em;
         height: 2em;
-        background: rgba(15, 30, 134, 0.5);
+        background: #f16355;
+        color: #fff;
         visibility: hidden;
+        top: 54px;
+        left: -1.3rem;
+        text-indent: 1.3em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .menu-link:hover {
+        text-decoration: none;
+        color: #fff;
+        background: #F37B70;
+        transition: all 0.2s ease-in;
     }
 
     .menu-sandwich {
@@ -1200,19 +1130,58 @@ margin on the iframe, cause it breaks stuff. */
         top: 0;
         left: 0;
         content: "";
-        width: 40px;
-        height: 4em;
-        background-size: 40px 40px;
-        background-position: center;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+        font-size: 32px;
+        line-height: 52px;
+        color: #f16355;
     }
 
     .menu-link-hover {
         visibility: visible;
         z-index: 100;
     }
+}
+
+@media all and (max-width: 560px) {
+
+}
+
+
+/* ==========================================================================
+   11. Media Queries - Smaller than 560px
+   ========================================================================== */
+
+@media all and (max-width: 560px) {
+    .post {
+        font-size: 1.2em;
+        width: 95%;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+    .header-background {
+        width: 200%;
+        margin-left: -20%;
+    }
+
+    .main-menu, .blog-title, .blog-description {
+        left: 0.2rem;
+    }
+
+    .blog-title {
+        font-size: 1.5em;
+    }
+
+    .blog-description {
+        font-size: 0.8em;
+    }
+
+    .social-icons {
+        right: 0;
+    }
+
+    .hover {
+        width: auto;
+    }
+    
 
 }
 
