@@ -532,7 +532,7 @@ margin on the iframe, cause it breaks stuff. */
     width: auto;
     position: absolute;
     top: 70px;
-    right: 1.3rem;
+    left: 1.3rem;
     color: #9B8574;
     border-bottom: 1px dashed #9B8574;
 }
@@ -540,8 +540,7 @@ margin on the iframe, cause it breaks stuff. */
 .blog-description {
     position: absolute;
     top: 120px;
-    right: 1.3rem;
-    text-align: right;
+    left: 1.3rem;
     width: 35%;
     color: #9B8574;
 }
@@ -565,6 +564,7 @@ margin on the iframe, cause it breaks stuff. */
     position: absolute;
     top: 0;
     bottom: 0;
+    left: 1.3rem;
     height: 100%;
     display: inline;
     float: left;
@@ -578,7 +578,6 @@ margin on the iframe, cause it breaks stuff. */
     line-height: 52px;
     float: left;
     margin-right: 5em;
-    padding-left: 0.5em;
     color: #C03B10;
     background: none repeat scroll 0% 0% ;
     transition: color 0.3s ease-in-out;
@@ -614,7 +613,6 @@ margin on the iframe, cause it breaks stuff. */
     height: 40px;
     display: inline-block;
     background: rgba(255, 255, 255, 0);
-    background-image: url(images/arrow.svg);
     background-size: 20px 40px;
     background-position: center;
     z-index: 2;
@@ -907,16 +905,16 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Add specific style for the subheader on the post page */
 .post-template .subheader {
-    background: rgba(251, 155, 61, 0.8);
+    background: #F3F1CA;
 }
 
 .post-template .social-link:after {
-    box-shadow: 0 0 0 3px #fff;
+    box-shadow: 0 0 0 3px #222;
 }
 
 .post-template .hover a, .post-template .social-link, .post-template .social-link:before, 
 .post-template .social-link:after, .post-template .menu-link {
-    color: #fff;
+    color: #222;
 }
 
 .post-template .menu-link:hover {
@@ -1257,222 +1255,55 @@ margin on the iframe, cause it breaks stuff. */
    10. Media Queries - Smaller than 900px
    ========================================================================== */
 
-@media only screen and (max-width: 900px) {
 
-    blockquote {
-        margin-left: 0;
+
+/* ==========================================================================
+   11. Media Queries - Smaller than 480px
+   ========================================================================== */
+
+@media all and (max-width: 480px) {
+
+    .main--menu {
+        position: absolute;
+        top: 4em;
+        background: white;
+        height: 0;
     }
 
-    .main-header {
+    .menu-link {
+        display: block;
+        width: 60%;
+        font-size: 1.3em;
+        line-height: 2em;
+        height: 2em;
+        background: rgba(15, 30, 134, 0.5);
+        visibility: hidden;
+    }
+
+    .menu-sandwich {
+        position: absolute;
+        display: inline;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 40px;
+        height: 4em;
+        background-size: 40px 40px;
+        background-position: center;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        height: auto;
-        min-height: 240px;
-        padding: 15% 0;
     }
 
-    .blog-title {
-        font-size: 4rem;
-        letter-spacing: -1px;
-    }
-
-    .blog-description {
-        font-size: 1.7rem;
-        line-height: 1.5em;
-        color: #C5B5A3;
-    }
-
-    .post {
-        font-size: 0.9em;
-        line-height: 1.6em;
-    }
-
-    .post-template .post {
-        padding-bottom: 1rem;
-    }
-
-    .post-template .post-header {
-        padding: 40px 0;
-    }
-
-    h1 {
-        font-size: 4em;
-        text-indent: -2px;
-    }
-
-    h2 {
-        font-size: 3em;
-    }
-
-    h3 {
-        font-size: 2em;
-    }
-
-    h4 {
-        font-size: 2.3em;
+    .menu-link-hover {
+        visibility: visible;
+        z-index: 100;
     }
 
 }
 
-/* ==========================================================================
-   11. Media Queries - Smaller than 500px
-   ========================================================================== */
-
-
-@media only screen and (max-width: 500px) {
-
-    .blog-logo img {
-        max-height: 80px;
-    }
-
-    .inner,
-    .pagination {
-        width: auto;
-        margin-left: 16px;
-        margin-right: 16px;
-    }
-
-    .post {
-        width:auto;
-        margin-left: 16px;
-        margin-right: 16px;
-        font-size: 0.8em;
-        line-height: 1.6em;
-    }
-
-    .main-header {
-        padding: 10% 0;
-    }
-
-    .blog-title {
-        font-size: 3rem;
-    }
-
-    .blog-description {
-        font-size: 1.5rem;
-    }
-
-
-    h1, h2 {
-        font-size: 3rem;
-        line-height: 1.1em;
-        letter-spacing: -1px;
-    }
-
-    h3 {
-        font-size: 2.8rem;
-    }
-
-    h4 {
-        font-size: 2.3rem;
-    }
-
-    .post-template .post {
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-
-    .post-template .post-header {
-        padding: 30px 0;
-    }
-
-    .post-template .site-footer {
-        margin-top: 0;
-    }
-
-    .post-content img {
-        padding: 0;
-    }
-
-    .post-content .full-img {
-        width: auto;
-        width: calc(100% + 32px); /* expand with to image + margins */
-        margin: 0 -16px; /* get rid of margins */
-        min-width: 0;
-        max-width: 112%; /* fallback when calc doesn't work */
-    }
-
-    .post-meta {
-        font-size: 1.3rem;
-    }
-
-    .post-footer {
-        padding: 4rem 0;
-        text-align: center;
-    }
-
-    .post-footer .author-img {
-        position: static;
-        width: auto;
-        text-align: center;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-        border-bottom: 1px dashed #FCC471;
-    }
-
-    .post-footer .author {
-        margin: 0 0 2rem 0;
-        padding: 0 0 1.6rem 0;
-        border-bottom: #FCC471 1px dashed;
-    }
-
-    .post-footer .share {
-        position: static;
-        width: auto;
-    }
-
-    .post-footer .share a {
-        margin: 1.4rem 0.8rem 0 0.8rem;
-    }
-
-    .author-meta li {
-        float: none;
-        margin: 0;
-        line-height: 1.6em;
-    }
-
-    .author-meta li:before {
-        display: none;
-    }
-
-    .older-posts,
-    .newer-posts {
-        position: static;
-        margin: 10px 0;
-    }
-
-    .page-number {
-        display: block;
-    }
-
-    .site-footer {
-        margin-top: 6rem;
-        font-size: 1.1rem;
-    }
-
-}
 
 /* ==========================================================================
    End of file. Media queries should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
-
-
-ul.social {
-    display: block;
-    list-style: none;
-    padding: 0px;
-    margin: auto;
-    margin-top: 20px;
-}
-
-ul.social li {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 0px;
-}
-
-ul.social li:last-child {
-    margin-right: 0px;
-}
