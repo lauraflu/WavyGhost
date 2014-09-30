@@ -1139,14 +1139,10 @@ margin on the iframe, cause it breaks stuff. */
         color: #f16355;
     }
 
-    .menu-link-hover {
+    .main-menu:hover .menu-link {
         visibility: visible;
         z-index: 100;
     }
-}
-
-@media all and (max-width: 560px) {
-
 }
 
 
