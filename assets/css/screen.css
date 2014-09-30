@@ -514,7 +514,8 @@ margin on the iframe, cause it breaks stuff. */
     left: 1.3rem;
     color: #6B5E54;
     border-bottom: 1px dashed #6B5E54;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script', 'PT Serif', cursive, serif;
+    text-indent: 0.1em;
 }
 
 .blog-description {
@@ -703,7 +704,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-preview {
-    background: #F3F1CA;
+    background: #f9f1d7;
 }
 
 .post:after, .post-header:after, .post-footer:after {
@@ -731,7 +732,7 @@ margin on the iframe, cause it breaks stuff. */
     height: 4rem;
     display: table;
     vertical-align: middle;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script', 'PT Serif', cursive, serif;
 }
 
 .post-title a {
@@ -1060,7 +1061,7 @@ margin on the iframe, cause it breaks stuff. */
     border-top: none;
     color: #fff;
     text-align: center;
-    background: rgba(251, 155, 61, 0.8);
+    background: rgb(163, 236, 243);
 }
 
 .site-footer a {
@@ -1166,6 +1167,7 @@ margin on the iframe, cause it breaks stuff. */
 
     .post-excerpt {
         font-size: 1.2em;
+        letter-spacing: -0.05em;
     }
 
     .header-background {
