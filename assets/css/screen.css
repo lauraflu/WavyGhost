@@ -903,7 +903,8 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-template h3 {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /* The author credit area after the post */
@@ -1098,18 +1099,23 @@ margin on the iframe, cause it breaks stuff. */
     }
 }
 
+/* ==========================================================================
+   11. Media Queries - Smaller than 680px
+   ========================================================================== */
+
+
 @media all and (max-width: 680px) {
     .header-background {
-        width: 150%;
+        width: 200%;
         margin-left: -10%;
     }
 
     .blog-title {
-        font-size: 2em;
+        font-size: 2.4em;
     }
 
     .blog-description {
-        top: 105px;
+        top: 110px;
         width: 50%;
     }
 
@@ -1169,17 +1175,12 @@ margin on the iframe, cause it breaks stuff. */
     }
 
     .post-title {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
-    .post-excerpt {
+    .post-excerpt, .pagination {
         font-size: 1.2em;
-        letter-spacing: -0.05em;
-    }
-
-    .header-background {
-        width: 200%;
-        margin-left: -20%;
+        letter-spacing: -0.02em;
     }
 
     .main-menu, .blog-title, .blog-description {
@@ -1187,11 +1188,12 @@ margin on the iframe, cause it breaks stuff. */
     }
 
     .blog-title {
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
 
     .blog-description {
-        font-size: 0.8em;
+        font-size: 1.2em;
+        width: 100%;
     }
 
     .social-icons {
@@ -1203,9 +1205,14 @@ margin on the iframe, cause it breaks stuff. */
     }
 }
 
-@media all and (max-width: 560px) {
+/* ==========================================================================
+   11. Media Queries - Smaller than 480px
+   ========================================================================== */
+
+@media all and (max-width: 480px) {
     .header-background {
-        width: 250%;
+        width: 300%;
+        margin-left: -250px;
     }
 }
 
