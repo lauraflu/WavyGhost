@@ -30,7 +30,7 @@ article, aside, details,
 figcaption, figure,
 footer, header, hgroup,
 main, nav, section,
-summary { display: block; }
+summary { display: block; clear: both;}
 audio, canvas, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 [hidden], template { display: none; }
@@ -843,7 +843,7 @@ margin on the iframe, cause it breaks stuff. */
    ========================================================================== */
 
 /* Add specific style for the subheader on the post page */
-.post-template .subheader {
+.simple-header .subheader {
     background: #F3F1CA;
     border: none;
 }
@@ -867,20 +867,6 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /* Insert some mad padding up in the header for better spacing */
-.post-template .post-header {
-    padding-bottom: 0.5em;
-}
-
-.post-template .post-title {
-    display: inline-block;
-    margin: 0 0 0.5em 0;
-    padding: 0;
-}
-
-.post-template .blog-title {
-    display: inline-block;
-    padding: 2.5rem 0;
-}
 
 .post-template .post-tags {
     display: block;
@@ -913,11 +899,6 @@ margin on the iframe, cause it breaks stuff. */
     margin: 4rem 0 0 0;
     padding: 2rem 0 0 0;
     border-top: 1px dashed rgba(0, 0, 0, 0.2);
-}
-
-.post-footer h4 {
-    font-size: 1.8rem;
-    margin: 0;
 }
 
 .post-footer p {
@@ -964,7 +945,7 @@ margin on the iframe, cause it breaks stuff. */
 /* Create some space to the right for the share links */
 .post-footer .author {
     float: left;
-    margin-left: 1em;
+    font-family: 'Dancing Script', 'PT Serif', cursive, serif;
 }
 
 .post-footer .author-img {
@@ -973,6 +954,12 @@ margin on the iframe, cause it breaks stuff. */
 
 .post-footer .share {
     float: right;
+    clear: none;
+}
+
+.post-footer .share h4 {
+    font-family: 'Dancing Script', 'PT Serif', cursive, serif;
+    margin-bottom: 0;
 }
 
 .post-footer .share a {

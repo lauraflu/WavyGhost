@@ -3,7 +3,7 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-<main class="content" role="main">
+<main class="content simple-header" role="main">
     {{> subheader}}
 
     <article class="{{post_class}}">
@@ -30,16 +30,19 @@
             </section>
 
             <footer class="post-footer">
+                <!-- 
                 <section class="author-img">
                     <img src="{{@blog.logo}}" alt="Blog Logo" width="100" />
                 </section>
+                -->
                 <section class="author">
                     <h4>{{author.name}}</h4>
+                    <!--
                     <p>{{author.bio}}</p>
                     <ul class="author-meta clearfix">
                         {{#if author.location}}<li>{{author.location}}</li>{{/if}}
                         {{#if author.website}}<li><a href="{{author.website}}">{{author.website}}</a></li>{{/if}}
-                    </ul>
+                    </ul>  -->
                 </section>
 
                 <section class="share">
