@@ -263,7 +263,7 @@ h6 {
 }
 
 a {
-    color: #41b7d8;
+    color: #142957;
     transition: color ease 0.3s;
     text-decoration: none;
 }
@@ -318,7 +318,7 @@ hr {
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.6em 0 1.6em -2.2em;
+    /* margin: 1.6em 0 1.6em -2.2em; */
     padding: 0 0 0 1.6em;
     border-left: #4a4a4a 0.4em solid;
 }
@@ -512,8 +512,8 @@ margin on the iframe, cause it breaks stuff. */
     position: absolute;
     top: 70px;
     left: 1.3rem;
-    color: #6B5E54;
-    border-bottom: 1px dashed #6B5E54;
+    color: #fff;
+    border-bottom: 1px dashed #fff;
     font-family: 'Dancing Script', 'PT Serif', cursive, serif;
     text-indent: 0.1em;
 }
@@ -523,19 +523,20 @@ margin on the iframe, cause it breaks stuff. */
     top: 120px;
     left: 1.3rem;
     width: 35%;
-    color: #6B5E54;
+    color: #fff;
 }
 
 /*  Subheader styles 
     These are the general settings, for the home page. Particular styles are
     also set for it for the post pages. */
-
 .subheader {
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 54px;
-    background: rgba(255, 255, 255, 0.5);
+    /* background: rgba(139, 103, 101, 0.3); */
+    /* border-bottom: 1px solid rgba(139, 103, 101, 0.4); */
+    position: absolute;
+    top: 0;
+    box-shadow: 1px 0px 2px 0px rgba(139, 103, 101, 0.3);
 }
 
 .main-menu {
@@ -555,13 +556,13 @@ margin on the iframe, cause it breaks stuff. */
     line-height: 52px;
     float: left;
     margin-right: 5em;
-    color: #f16355;
+    color: #8b6765;
     background: none repeat scroll 0% 0% ;
     transition: color 0.3s ease-in-out;
 }
 
 .menu-link:hover {
-    color: #DF8265;
+    color: #bc9896;
     text-decoration: none;
 }
 
@@ -643,7 +644,7 @@ margin on the iframe, cause it breaks stuff. */
     top: -6px;
     left: -6px;
     padding: 6px;
-    box-shadow: 0 0 0 3px #f16355;
+    box-shadow: 0 0 0 3px #8b6765;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -webkit-transform: scale(.8);
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -660,7 +661,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* --- hover effects ---*/
 .hover a, .social-link, .social-link:before, .social-link:after {
-    color: #f16355;
+    color: #8b6765;
 }
 
 .hover a:hover, .social-link:hover {
@@ -742,7 +743,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-title a:hover {
-    color: #a64849;
+    color: #702337;
     text-decoration: none;
 }
 
@@ -757,7 +758,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .read-more {
-    color: #a64849;
+    color: #702337;
     text-decoration: none;
 }
 
@@ -844,6 +845,7 @@ margin on the iframe, cause it breaks stuff. */
 /* Add specific style for the subheader on the post page */
 .post-template .subheader {
     background: #F3F1CA;
+    border: none;
 }
 
 /* Stop .full-img from creating horizontal scroll - slight hack due to
@@ -893,6 +895,15 @@ margin on the iframe, cause it breaks stuff. */
     height: auto;
     padding: 0.6em 0;
     margin: 0 auto;
+}
+
+/* Some styles for the lists and paragraphs inside the post */
+.post-template ul, .post-template ol {
+    padding-left: 1.2rem;
+}
+
+.post-template h3 {
+    margin-top: 1rem;
 }
 
 /* The author credit area after the post */
@@ -1061,7 +1072,7 @@ margin on the iframe, cause it breaks stuff. */
     border-top: none;
     color: #fff;
     text-align: center;
-    background: rgb(163, 236, 243);
+    background: #8b6765;
 }
 
 .site-footer a {
@@ -1103,7 +1114,7 @@ margin on the iframe, cause it breaks stuff. */
     }
 
     .social-icons:hover {
-        width: 100%;
+        width: 90%;
     }
 
     .menu-link {
@@ -1112,7 +1123,7 @@ margin on the iframe, cause it breaks stuff. */
         font-size: 1.3em;
         line-height: 2em;
         height: 2em;
-        background: #f16355;
+        background: #8b6765;
         color: #fff;
         visibility: hidden;
         top: 54px;
@@ -1124,7 +1135,7 @@ margin on the iframe, cause it breaks stuff. */
     .menu-link:hover {
         text-decoration: none;
         color: #fff;
-        background: #F37B70;
+        background: #bc9896;
         transition: all 0.2s ease-in;
     }
 
@@ -1136,7 +1147,7 @@ margin on the iframe, cause it breaks stuff. */
         content: "";
         font-size: 32px;
         line-height: 52px;
-        color: #f16355;
+        color: #8b6765;
     }
 
     .main-menu:hover .menu-link {
@@ -1190,8 +1201,12 @@ margin on the iframe, cause it breaks stuff. */
     .hover {
         width: auto;
     }
-    
+}
 
+@media all and (max-width: 560px) {
+    .header-background {
+        width: 250%;
+    }
 }
 
 
