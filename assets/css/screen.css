@@ -844,7 +844,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Add specific style for the subheader on the post page */
 .simple-header .subheader {
-    background: #F3F1CA;
+    background: #f9f1d7;
     border: none;
 }
 
