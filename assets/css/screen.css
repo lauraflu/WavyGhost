@@ -486,7 +486,6 @@ margin on the iframe, cause it breaks stuff. */
     height: auto;
     top: 0;
     transition: all 0.3s ease-in-out;
-    overflow: hidden;
 }
 
 .header-background {
@@ -817,7 +816,7 @@ margin on the iframe, cause it breaks stuff. */
 .post-preview .pp-image {
     position: relative;
     float: left;
-    margin: 0 1em 1em 0;
+    margin: 0 1em 0 0;
     width: auto;
     max-width: 200px;
     height: 200px;
@@ -1060,8 +1059,8 @@ margin on the iframe, cause it breaks stuff. */
 
 .site-footer {
     position: relative;
-    margin: 8rem 0 0 0;
-    padding: 2rem 0;
+    margin: 4rem 0 0 0;
+    padding: 0  0 2rem 0;
     border-top: none;
     color: #000;
     text-align: center;
@@ -1120,7 +1119,7 @@ margin on the iframe, cause it breaks stuff. */
         font-size: 1.3em;
         line-height: 2em;
         height: 2em;
-        background: #8b6765;
+        background: #6D2337;
         color: #fff;
         visibility: hidden;
         top: 54px;
@@ -1132,7 +1131,7 @@ margin on the iframe, cause it breaks stuff. */
     .menu-link:hover {
         text-decoration: none;
         color: #fff;
-        background: #bc9896;
+        background: #9B6674;
         transition: all 0.2s ease-in;
     }
 
@@ -1144,7 +1143,7 @@ margin on the iframe, cause it breaks stuff. */
         content: "";
         font-size: 32px;
         line-height: 52px;
-        color: #8b6765;
+        color: #6D2337;
     }
 
     .main-menu:hover .menu-link {
