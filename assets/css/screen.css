@@ -505,25 +505,26 @@ margin on the iframe, cause it breaks stuff. */
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
     font-size: 2.5em;
-    line-height: 1em; 
-    /*font-weight: 800;*/
-    /*font-variant: small-caps;*/
+    line-height: 1em;
     width: auto;
-    position: absolute;
-    top: 70px;
-    left: 1.3rem;
-    color: #fff;
-    border-bottom: 1px dashed #fff;
+    text-align: center;
+    color: #000;
     font-family: 'Dancing Script', 'PT Serif', cursive, serif;
-    text-indent: 0.1em;
+    width: 100%;
+    margin: 0.25em 0 0 0;
+}
+
+.blog-title p {
+    -ms-transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
 }
 
 .blog-description {
-    position: absolute;
-    top: 120px;
-    left: 1.3rem;
+    color: #000;
     width: 35%;
-    color: #fff;
+    margin-left: 50%;
+    margin-top: 0.5em;
 }
 
 /*  Subheader styles 
@@ -533,10 +534,7 @@ margin on the iframe, cause it breaks stuff. */
     width: 100%;
     height: 54px;
     /* background: rgba(139, 103, 101, 0.3); */
-    /* border-bottom: 1px solid rgba(139, 103, 101, 0.4); */
-    position: absolute;
-    top: 0;
-    box-shadow: 1px 0px 2px 0px rgba(139, 103, 101, 0.3);
+    border-bottom: 1px solid rgba(139, 103, 101, 0.1); 
 }
 
 .main-menu {
@@ -556,13 +554,13 @@ margin on the iframe, cause it breaks stuff. */
     line-height: 52px;
     float: left;
     margin-right: 5em;
-    color: #8b6765;
+    color: #6D2337;
     background: none repeat scroll 0% 0% ;
     transition: color 0.3s ease-in-out;
 }
 
 .menu-link:hover {
-    color: #bc9896;
+    color: #9B6674;
     text-decoration: none;
 }
 
@@ -580,6 +578,7 @@ margin on the iframe, cause it breaks stuff. */
     width: 40px;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
+    z-index: 100;   
 }
 
 .hover {
@@ -644,7 +643,7 @@ margin on the iframe, cause it breaks stuff. */
     top: -6px;
     left: -6px;
     padding: 6px;
-    box-shadow: 0 0 0 3px #8b6765;
+    box-shadow: 0 0 0 3px #6D2337;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -webkit-transform: scale(.8);
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -661,7 +660,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* --- hover effects ---*/
 .hover a, .social-link, .social-link:before, .social-link:after {
-    color: #8b6765;
+    color: #6D2337;
 }
 
 .hover a:hover, .social-link:hover {
@@ -705,7 +704,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-preview {
-    background: #f9f1d7;
+    background: #FFF8F2;
 }
 
 .post:after, .post-header:after, .post-footer:after {
@@ -714,26 +713,22 @@ margin on the iframe, cause it breaks stuff. */
   clear: both;
 }
 
-.post:first-child {
-    margin-top: 0;
-}
-
 .post-header {
     width: 100%;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+    display: table;
 }
 
 .post-title {
     display: inline-block;
     color: #222;
-    float: left;
     margin: 0 0 0 0;
     padding: 0;
     max-width: 80%;
-    height: 4rem;
-    display: table;
-    vertical-align: middle;
     font-family: 'Dancing Script', 'PT Serif', cursive, serif;
+    width: 80%;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .post-title a {
@@ -764,9 +759,9 @@ margin on the iframe, cause it breaks stuff. */
 
 .post-meta {
     display: inline-block;
-    float: right;
     margin: 0 0 5px 0;
     color: #222;
+    float: right;
 }
 
 .post-meta time {
@@ -1058,14 +1053,13 @@ margin on the iframe, cause it breaks stuff. */
     margin: 8rem 0 0 0;
     padding: 2rem 0;
     border-top: none;
-    color: #fff;
+    color: #000;
     text-align: center;
-    background: #8b6765;
 }
 
 .site-footer a {
     font-weight: bold;
-    color: #fff;
+    color: #000;
 }
 
 .site-footer a:hover {
@@ -1168,10 +1162,6 @@ margin on the iframe, cause it breaks stuff. */
     .post-excerpt, .pagination {
         font-size: 1.2em;
         letter-spacing: -0.02em;
-    }
-
-    .main-menu, .blog-title, .blog-description {
-        left: 0.2rem;
     }
 
     .blog-title {

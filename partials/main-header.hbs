@@ -1,11 +1,8 @@
 <header class="main-header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-	<object type="image/svg+xml" data="{{asset "images/black_wave.svg"}}" class="header-background">
-  		Kiwi Logo
-	</object>
     
 	{{> subheader}}
 	
-    <div class="blog-title">{{@blog.title}}</div>
+    <div class="blog-title"><p>{{@blog.title}}</p></div>
     <!--<h2 class="blog-description">{{@blog.description}}</h2>-->
     <!-- for special purpose I've omited the default blog desc -->
     <div class="blog-description">  {{@blog.description}}  </div>
