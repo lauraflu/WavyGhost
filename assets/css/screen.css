@@ -210,8 +210,8 @@ body {
     font-family: 'PT Serif', serif;
     font-size: 1em;
     line-height: 1.6em;
-    letter-spacing: -0.03em;s
-    color: #3A4145;
+    letter-spacing: -0.01em;
+    color: #000;
 }
 
 ::-moz-selection {
@@ -704,7 +704,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-preview {
-    background: #FFF8F2;
+    background: #F8F3F0;
 }
 
 .post:after, .post-header:after, .post-footer:after {
@@ -742,7 +742,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-title a:hover {
-    color: #702337;
+    color: #6D2337;
     text-decoration: none;
 }
 
@@ -757,7 +757,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .read-more {
-    color: #702337;
+    color: #6D2337;
     text-decoration: none;
 }
 
@@ -843,8 +843,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Add specific style for the subheader on the post page */
 .simple-header .subheader {
-    background: #f9f1d7;
-    border: none;
+    
 }
 
 /* Stop .full-img from creating horizontal scroll - slight hack due to
