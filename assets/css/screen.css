@@ -210,6 +210,7 @@ body {
     font-family: 'PT Serif', serif;
     font-size: 1em;
     line-height: 1.6em;
+    letter-spacing: -0.03em;s
     color: #3A4145;
 }
 
@@ -230,36 +231,35 @@ h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
     margin-top: 0;
+    letter-spacing: 0;
 }
 
 h1 {
-    font-size: 2.5em;
-    line-height: 1.2em;
-    letter-spacing: -2px;
+    font-size: 2em;
+    line-height: 1.2em;s
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 1.2em;
-    letter-spacing: -1px;
     text-indent: -2px;
 }
 
 h3 {
-    font-size: 2.5em;
+    font-size: 1.6em;
 }
 
 h4 {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 h5 {
-    font-size: 1.8em;
+    font-size: 1.4em;
 }
 
 h6 {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 a {
@@ -731,6 +731,10 @@ margin on the iframe, cause it breaks stuff. */
     vertical-align: middle;
 }
 
+.post-preview .post-title {
+    font-size: 2.2em;
+}
+
 .post-title a {
     text-decoration: none;
     color: #222;
@@ -861,6 +865,11 @@ margin on the iframe, cause it breaks stuff. */
     margin: 1.5em 0  1.5em 0;
 }
 
+/* Because the header title has a special font, it needs to be set to a lerger size */
+.post-template .post-title {
+    font-size: 2.6em;
+}
+
 /* Insert some mad padding up in the header for better spacing */
 
 .post-template .post-tags {
@@ -979,14 +988,16 @@ margin on the iframe, cause it breaks stuff. */
 .tag-archive-header {
     position: relative;
     max-width: 700px;
-    margin: 2rem auto;
+    margin: 0 auto;
+    margin-top: 4rem;
     text-align: center;
     color: #222;
 }
 
 .tag-archive-header .icon-tag, .tag-archive-header h1 {
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.8em;
+    font-weight: normal;
 }
 
 /* ==========================================================================
