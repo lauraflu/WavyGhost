@@ -502,6 +502,11 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
+.blog-about {
+    width: 100%;
+    overflow: hidden;
+}
+
 .blog-title {
     font-size: 2.5em;
     line-height: 1em;
@@ -853,14 +858,16 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Tweak the .post wrapper style */
 .post-template .post {
-    margin-top: 60px;
+    margin-top: 2rem;
     padding-bottom: 0;
     background: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-/* Add spacing between paragraphs */
-.post-template p {
-    margin: 1.5em 0  1.5em 0;
+.post-template .post p {
+    margin: 1rem 0;
 }
 
 /* Because the header title has a special font, it needs to be set to a lerger size */
@@ -1095,18 +1102,12 @@ margin on the iframe, cause it breaks stuff. */
 
 
 @media all and (max-width: 680px) {
-    .header-background {
-        width: 200%;
-        margin-left: -10%;
-    }
-
     .blog-title {
-        font-size: 2.4em;
+        font-size: 3em;
     }
 
     .blog-description {
-        top: 110px;
-        width: 50%;
+        width: 49%;
     }
 
     .social-icons:hover {
@@ -1165,21 +1166,16 @@ margin on the iframe, cause it breaks stuff. */
     }
 
     .post-title {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
-    .post-excerpt, .pagination {
+    .post-excerpt, .pagination, .post-content {
         font-size: 1.2em;
         letter-spacing: -0.02em;
     }
 
-    .blog-title {
-        font-size: 2.5em;
-    }
-
-    .blog-description {
-        font-size: 1.2em;
-        width: 100%;
+    .menu-sandwich {
+        left: -1.3rem;
     }
 
     .social-icons {
@@ -1196,10 +1192,7 @@ margin on the iframe, cause it breaks stuff. */
    ========================================================================== */
 
 @media all and (max-width: 480px) {
-    .header-background {
-        width: 300%;
-        margin-left: -250px;
-    }
+    
 }
 
 
