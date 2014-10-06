@@ -507,9 +507,13 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .blog-title p {
+    background: url(../images/line4.svg);
+    background-repeat: no-repeat;
+    background-position: 61% 0;
     -ms-transform: rotate(-7deg);
     -webkit-transform: rotate(-7deg);
     transform: rotate(-7deg);
+    height: 5rem;
 }
 
 .blog-description {
