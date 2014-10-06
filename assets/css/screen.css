@@ -699,7 +699,7 @@ margin on the iframe, cause it breaks stuff. */
     background: #F8F3F0;
 }
 
-.post:after, .post-header:after, .post-footer:after {
+.post-excerpt:after, .post-header:after, .post-footer:after {
   content: "";
   display: table;
   clear: both;
@@ -727,6 +727,36 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 2.2em;
 }
 
+.post-preview:before, .post-preview:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 17px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.post-preview:after {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
+
 .post-title a {
     text-decoration: none;
     color: #222;
@@ -742,9 +772,9 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
 }
 
-.post-excerpt p {
-    margin: 1.6rem 0 0 0;
-    font-size: 0.9em;
+.post-excerpt div {
+    margin: 1.6rem 0 1rem 0;
+    font-size: 1em;
     line-height: 1.6em;
 }
 

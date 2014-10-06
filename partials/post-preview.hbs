@@ -10,11 +10,12 @@
 		</span>
     </header>
     <section class="post-excerpt">
-        <p>
+        <div>
         	{{content words="0"}}	
 			{{excerpt}}
         	&hellip; <a class="read-more" href="{{url}}">Read more &raquo;</a>
-        </p>
+        </div>
+        <span class="post-tags">{{tags prefix="<span class='icon-tag'></span>"}}</span>
     </section>
-    <span class="post-tags">{{tags prefix="<span class='icon-tag'></span>"}}</span>
+    
 </article>
