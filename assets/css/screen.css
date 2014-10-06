@@ -145,6 +145,10 @@ table { border-collapse: collapse; border-spacing: 0; }
   line-height: 1em;
  
 }
+
+[class^="icon-"]:hover:before, [class*=" icon-"]:hover:before {
+    color: #CF2525;
+}
  
 .icon-facebook-circled:before { content: '\e800'; } /* '' */
 .icon-gplus-circled:before { content: '\e801'; } /* '' */
@@ -513,7 +517,7 @@ margin on the iframe, cause it breaks stuff. */
     -ms-transform: rotate(-7deg);
     -webkit-transform: rotate(-7deg);
     transform: rotate(-7deg);
-    height: 5rem;
+    height: 4rem;
 }
 
 .blog-description {
@@ -527,6 +531,7 @@ margin on the iframe, cause it breaks stuff. */
     These are the general settings, for the home page. Particular styles are
     also set for it for the post pages. */
 .subheader {
+    position: relative;
     width: 100%;
     height: 54px;
     /* background: rgba(139, 103, 101, 0.3); */
@@ -550,13 +555,13 @@ margin on the iframe, cause it breaks stuff. */
     line-height: 52px;
     float: left;
     margin-right: 5em;
-    color: #6D2337;
+    color: #000;
     background: none repeat scroll 0% 0% ;
     transition: color 0.3s ease-in-out;
 }
 
 .menu-link:hover {
-    color: #9B6674;
+    color: #CF2525;
     text-decoration: none;
 }
 
@@ -639,7 +644,7 @@ margin on the iframe, cause it breaks stuff. */
     top: -6px;
     left: -6px;
     padding: 6px;
-    box-shadow: 0 0 0 3px #6D2337;
+    box-shadow: 0 0 0 3px #000;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -webkit-transform: scale(.8);
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -656,11 +661,16 @@ margin on the iframe, cause it breaks stuff. */
 
 /* --- hover effects ---*/
 .hover a, .social-link, .social-link:before, .social-link:after {
-    color: #6D2337;
+    color: #000;
 }
 
-.hover a:hover, .social-link:hover {
+.social-link:hover:after {
+    box-shadow: 0 0 0 3px #CF2525;
+}
+
+.hover a:hover, .social-link:hover:before, .social-link:hover {
     text-decoration: none;
+    color: #CF2525;
 }
 
 .social-icons:hover {
@@ -768,7 +778,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-title a:hover {
-    color: #6D2337;
+    color: #CF2525;
     text-decoration: none;
 }
 
@@ -1003,8 +1013,8 @@ margin on the iframe, cause it breaks stuff. */
     float: right;
 }
 
-.post-footer .share a:hover {
-    color: #50585D;
+.post-footer .share a:hover:before {
+    transition: all 0.25s ease-in-out;
 }
 
 
