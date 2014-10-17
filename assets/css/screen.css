@@ -468,7 +468,16 @@ margin on the iframe, cause it breaks stuff. */
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
-
+.home-template {
+    background: url(../images/airplane1.png),
+                url(../images/leftie2.png),
+                url(../images/leftie1.png),
+                url(../images/rightie1.png);
+    background-position: left 200px,left 400px, left 1000px, right 200px;
+    background-size: 100px auto, 15% auto, 15% auto, 15% auto;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-attachment: scroll, scroll, scroll, scroll;
+}
 
 /* Header styles */
 .main-header {
@@ -511,7 +520,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .blog-title p {
-    background: url(../images/line4.svg);
+    background: url(../images/line.svg);
     background-repeat: no-repeat;
     background-position: 61% 0;
     -ms-transform: rotate(-7deg);
@@ -712,6 +721,26 @@ margin on the iframe, cause it breaks stuff. */
 .post-preview {
     background: #F8F3F0;
 }
+/*
+.post-preview:nth-child(1) {
+    background: #FCA158;
+}
+
+.post-preview:nth-child(2) {
+    background: #B9F8CD;
+}
+
+.post-preview:nth-child(3) {
+    background: #D8C4F5;
+}
+
+.post-preview:nth-child(4) {
+    background: #89EFF4;
+}
+
+.post-preview:nth-child(5) {
+    background: #EE6F78;
+}*/
 
 .post-excerpt:after, .post-header:after, .post-footer:after {
   content: "";
