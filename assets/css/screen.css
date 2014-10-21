@@ -197,8 +197,6 @@ html {
 }
 
 body {
-    height: 100%;
-    max-height: 100%;
     font-family: 'PT Serif', serif;
     font-size: 1em;
     line-height: 1.6em;
@@ -468,15 +466,109 @@ margin on the iframe, cause it breaks stuff. */
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
-.home-template {
-    background: url(../images/airplane1.png),
-                url(../images/leftie2.png),
-                url(../images/leftie1.png),
-                url(../images/rightie1.png);
-    background-position: left 200px,left 400px, left 1000px, right 200px;
-    background-size: 100px auto, 15% auto, 15% auto, 15% auto;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-attachment: scroll, scroll, scroll, scroll;
+
+   .home-template {
+        display: block;
+        overflow: auto;
+        border: 1px solid black;
+   }
+
+/*  Background images are attached to the post-previews, so that when there are
+    fewer posts on a page, the background won't appear cut or something */
+
+.post-preview-wrapper {
+    position: relative;
+}
+
+.post-preview-wrapper:after, .post-preview-wrapper:before {
+    opacity: 1;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+/*======= left side =======*/
+.post-preview:nth-child(1) .post-preview-wrapper:before {
+    content: "";
+    position: absolute;
+    left: -22%;
+    top: -1em;
+    width: 20%;
+    height: 200%;
+    background: url(../images/globe.png) scroll no-repeat top left, url(../images/paper-airplane-deco.png) scroll no-repeat bottom left;
+    background-size: 100% auto, 80% auto;
+    z-index: -100;
+}
+
+.post-preview:nth-child(3) .post-preview-wrapper:before {
+    content: "";
+    position: absolute;
+    left: -22%;
+    top: -1em;
+    width: 20%;
+    height: 200%;
+    background: url(../images/feather-ink.png) scroll no-repeat top left, url(../images/test-tube.png) scroll no-repeat bottom left;
+    background-size: 100% auto, 50% auto;
+    z-index: -100;
+}    
+
+.post-preview:nth-child(5) .post-preview-wrapper:before {
+    content: "";
+    position: absolute;
+    left: -22%;
+    top: -1em;
+    width: 20%;
+    height: 100%;
+    background: url(../images/wing-revert.png) scroll no-repeat center center;
+    background-size: 100% auto;
+    z-index: -100;
+} 
+
+/*======= right side =======*/
+.post-preview:nth-child(1) .post-preview-wrapper:after {    
+    content: "";
+    position: absolute;
+    right: -22%;
+    top: 0;
+    width: 20%;
+    height: 200%;
+    background: url(../images/eye-pencil.png) scroll no-repeat;
+    background-size: 100% auto;
+    z-index: -100;
+}
+
+.post-preview:nth-child(3) .post-preview-wrapper:after {    
+    content: "";
+    position: absolute;
+    right: -22%;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    background: url(../images/lightning.png) scroll no-repeat top left, url(../images/puzzle-inverted.png) scroll no-repeat bottom right;
+    background-size: 50% auto, 70% auto;
+    z-index: -100;
+}
+
+.post-preview:nth-child(4) .post-preview-wrapper:after {    
+    content: "";
+    position: absolute;
+    right: -22%;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    background: url(../images/echer.png) scroll no-repeat top left, url(../images/magic.png) scroll no-repeat bottom right;
+    background-size: 80% auto, 80% auto;
+    z-index: -100;
+}
+
+.post-preview:nth-child(5) .post-preview-wrapper:after {    
+    content: "";
+    position: absolute;
+    right: -22%;
+    top: -1em;
+    width: 20%;
+    height: 100%;
+    background: url(../images/wing.png) scroll no-repeat center center;
+    background-size: 100% auto;
+    z-index: -100;
 }
 
 /* Header styles */
@@ -1127,11 +1219,13 @@ margin on the iframe, cause it breaks stuff. */
 
 .site-footer {
     position: relative;
-    margin: 4rem 0 0 0;
-    padding: 0  0 2rem 0;
+    /* margin: 4rem 0 0 0; */
+    padding: 4rem 0 4rem 0;
     border-top: none;
     color: #000;
     text-align: center;
+    background: url(../images/puzzle_small_size_2.png) scroll no-repeat 80% bottom;
+    background-size: 180px auto;
 }
 
 .site-footer a {
